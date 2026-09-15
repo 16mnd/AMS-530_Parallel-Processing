@@ -1,0 +1,104 @@
+GRAPH VALIDATION
+----------------
+Vertices: 32
+Edges: 48
+All vertices degree 3: PASS
+Connected: PASS
+No self-loops: PASS
+
+FIVE-STEP VERIFICATION
+----------------------
+A 5-step broadcast requires perfect doubling:
+1 -> 2 -> 4 -> 8 -> 16 -> 32
+
+Step: 1
+Informed vertices required before step: 1
+Required transmissions: 1
+States entering step: 1
+Valid perfect-doubling states after step: 3
+
+Step: 2
+Informed vertices required before step: 2
+Required transmissions: 2
+States entering step: 3
+Valid perfect-doubling states after step: 12
+
+Step: 3
+Informed vertices required before step: 4
+Required transmissions: 4
+States entering step: 12
+Valid perfect-doubling states after step: 48
+
+Step: 4
+Informed vertices required before step: 8
+Required transmissions: 8
+States entering step: 48
+Valid perfect-doubling states after step: 0
+
+Perfect doubling becomes impossible at Step 4.
+Therefore a 5-step broadcast is IMPOSSIBLE.
+
+BROADCAST SEARCH
+----------------
+Source: 1
+
+Step depth: 0
+States processed: 1
+States currently in queue: 0
+Unique states discovered: 1
+
+Step depth: 1
+States processed: 2
+States currently in queue: 2
+Unique states discovered: 4
+
+Step depth: 2
+States processed: 5
+States currently in queue: 11
+Unique states discovered: 16
+
+Step depth: 3
+States processed: 17
+States currently in queue: 47
+Unique states discovered: 64
+
+Step depth: 4
+States processed: 65
+States currently in queue: 751
+Unique states discovered: 816
+
+Step depth: 5
+States processed: 817
+States currently in queue: 12718
+Unique states discovered: 13535
+
+Step depth: 6
+States processed: 13536
+States currently in queue: 33
+Unique states discovered: 13569
+
+BROADCAST COMPLETE
+Broadcast steps: 6
+States processed: 13536
+Unique states discovered: 13569
+
+BROADCAST SCHEDULE
+------------------
+Step 1: 1-2 | Active edges: 1
+Step 2: 1-32, 2-3 | Active edges: 2
+Step 3: 1-12, 2-23, 3-4, 32-31 | Active edges: 4
+Step 4: 3-19, 4-5, 12-11, 23-22, 31-30, 32-16 | Active edges: 6
+Step 5: 4-26, 5-6, 11-10, 12-13, 16-15, 19-18, 22-21, 23-24, 30-29, 31-9 | Active edges: 10
+Step 6: 15-25, 16-17, 18-7, 19-20, 21-14, 24-8, 26-27, 29-28 | Active edges: 8
+
+RESULT
+------
+Total steps: 6
+Total edge uses: 31
+
+FINAL CONCLUSION
+----------------
+The theoretical lower bound is 5 steps.
+The exhaustive perfect-doubling test proves that 5 steps is impossible.
+A valid 6-step broadcast was found.
+Therefore the minimum broadcast time is 6 steps.
