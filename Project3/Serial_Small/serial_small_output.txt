@@ -1,0 +1,10 @@
+Iteration 1: Jacobi = 1.870829, Gauss-Seidel = 1.644339
+Iteration 2: Jacobi = 1.375000, Gauss-Seidel = 1.007284
+Iteration 3: Jacobi = 1.056509, Gauss-Seidel = 0.637006
+Iteration 4: Jacobi = 0.832425, Gauss-Seidel = 0.410528
+Iteration 5: Jacobi = 0.664668, Gauss-Seidel = 0.266619
+Iteration 6: Jacobi = 0.534305, Gauss-Seidel = 0.173883
+Iteration 7: Jacobi = 0.430933, Gauss-Seidel = 0.113622
+Iteration 8: Jacobi = 0.348118, Gauss-Seidel = 0.074310
+Iteration 9: Jacobi = 0.281435, Gauss-Seidel = 0.048619
+Iteration 10: Jacobi = 0.227608, Gauss-Seidel = 0.031816
