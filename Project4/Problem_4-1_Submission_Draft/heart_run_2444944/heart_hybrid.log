@@ -1,0 +1,84 @@
+============================================================
+P=1  |  curved area N=16  |  voxel mass N=64
+Surface area  11.522614491  reference 11.52470  error 0.01810%  PASS
+Mass          1.664680633  reference 1.66427  error 0.02467%  PASS
+Triangles=2312  Newton steps=4638  midpoint steps=20742
+
+ACTUAL COUNT PER MPI RANK (source-level arithmetic model)
+Rank       Area FLOPs       Mass FLOPs      Total FLOPs
+   0          4119266          9175050         13294316
+
+PROFESSOR'S REQUIRED TABLE: AVERAGE FLOPs PER CORE
+                 P=1
+Surface area     4119266.00
+Mass at t=1      9175050.00
+
+Total arithmetic: area=4119266 mass=9175050 combined=13294316
+Maximum rank FLOPs: area=4119266 mass=9175050 combined=13294316
+Combined load imbalance (max/average): 1.000
+Elapsed time (slowest rank): 0.002296 s
+Count convention: +,-,*,/,sqrt each 1; integer work, comparisons, MPI and memory excluded.
+These are instrumented arithmetic counts, not CPU hardware counters.
+
+============================================================
+P=4  |  curved area N=16  |  voxel mass N=64
+Surface area  11.522614491  reference 11.52470  error 0.01810%  PASS
+Mass          1.664680633  reference 1.66427  error 0.02467%  PASS
+Triangles=2312  Newton steps=13101  midpoint steps=20742
+
+ACTUAL COUNT PER MPI RANK (source-level arithmetic model)
+Rank       Area FLOPs       Mass FLOPs      Total FLOPs
+   0          1117964          2293770          3411734
+   1          1177936          2293760          3471696
+   2          1177360          2293760          3471120
+   3          1178358          2293760          3472118
+
+PROFESSOR'S REQUIRED TABLE: AVERAGE FLOPs PER CORE
+                 P=4
+Surface area     1162904.50
+Mass at t=1      2293762.50
+
+Total arithmetic: area=4651618 mass=9175050 combined=13826668
+Maximum rank FLOPs: area=1178358 mass=2293770 combined=3472118
+Combined load imbalance (max/average): 1.004
+Elapsed time (slowest rank): 0.000980 s
+Count convention: +,-,*,/,sqrt each 1; integer work, comparisons, MPI and memory excluded.
+These are instrumented arithmetic counts, not CPU hardware counters.
+
+============================================================
+P=16  |  curved area N=16  |  voxel mass N=64
+Surface area  11.522614491  reference 11.52470  error 0.01810%  PASS
+Mass          1.664680633  reference 1.66427  error 0.02467%  PASS
+Triangles=2312  Newton steps=17676  midpoint steps=20742
+
+ACTUAL COUNT PER MPI RANK (source-level arithmetic model)
+Rank       Area FLOPs       Mass FLOPs      Total FLOPs
+   0           233467           573450           806917
+   1           314783           573440           888223
+   2           314097           573440           887537
+   3           315065           573440           888505
+   4           313462           573440           886902
+   5           308200           573440           881640
+   6           313102           573440           886542
+   7           315341           573440           888781
+   8           310354           573440           883794
+   9           308796           573440           882236
+  10           316257           573440           889697
+  11           312386           573440           885826
+  12           317451           573440           890891
+  13           318416           573440           891856
+  14           310034           573440           883474
+  15           315522           573440           888962
+
+PROFESSOR'S REQUIRED TABLE: AVERAGE FLOPs PER CORE
+                 P=16
+Surface area     308545.81
+Mass at t=1      573440.62
+
+Total arithmetic: area=4936733 mass=9175050 combined=14111783
+Maximum rank FLOPs: area=318416 mass=573450 combined=891856
+Combined load imbalance (max/average): 1.011
+Elapsed time (slowest rank): 0.000740 s
+Count convention: +,-,*,/,sqrt each 1; integer work, comparisons, MPI and memory excluded.
+These are instrumented arithmetic counts, not CPU hardware counters.
+
